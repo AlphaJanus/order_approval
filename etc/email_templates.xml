@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Email:etc/email_templates.xsd">
+    <template id="request_email_template" label="Email Request" file="request.html" type="html" module="Netzexpert_OrderApproval" area="frontend"/>
+    <template id="user_confirmation_email" label="Email Request" file="userConfirmationEmail.html" type="html" module="Netzexpert_OrderApproval" area="frontend"/>
+    <template id="user_decline_email" label="Email Request" file="userDeclineEmail.html" type="html" module="Netzexpert_OrderApproval" area="frontend"/>
+</config>

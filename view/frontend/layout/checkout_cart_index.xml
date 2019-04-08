@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!--
+ * Netzexpert Order Approval Extension
+ */
+ -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="cart.summary">
+            <block class="Netzexpert\OrderApproval\Block\Checkout\Cart\ApprovalRequest" name="order.approval" template="Netzexpert_OrderApproval::checkout/cart/button.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

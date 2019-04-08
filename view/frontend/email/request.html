@@ -1,0 +1,56 @@
+<!--@subject {{trans "Test" store_name=$store.getFrontendName()}} @-->
+{{template config_path="design/email/header_template"}}
+<table class="greetings">
+    <tr>
+        <th>
+            Greetings {{var name}}!
+        </th>
+    </tr>
+</table>
+<!--<table class="table">-->
+    <!--<tr>-->
+        <!--<th>-->
+            <!--You have received request for order approval.-->
+            <!--You can review the full cart page by following this link.-->
+        <!--</th>-->
+    <!--</tr>-->
+    <!--<tr>-->
+        <!--<td>-->
+            <!--{{var link}}-->
+        <!--</td>-->
+    <!--</tr>-->
+<!--</table>-->
+<table>
+    <tr class="email-intro">
+    </tr>
+    <tr class="email-information">
+        <td>
+            {{layout handle="order_quote_items" quote=$quote area="frontend"}}
+        </td>
+    </tr>
+</table>
+<table class="table">
+    <tr>
+        <th>
+            Please, follow this link to approve&nbsp;user request.
+        </th>
+    </tr>
+    <tr>
+        <td>
+            {{var link}}
+        </td>
+    </tr>
+</table>
+<table class="table">
+    <tr>
+        <th>
+            Please, follow this link to decline&nbsp;user request.
+        </th>
+    </tr>
+    <tr>
+        <td>
+            {{var link2}}
+        </td>
+    </tr>
+</table>
+{{template config_path="design/email/footer_template"}}

@@ -1,0 +1,34 @@
+<?php
+/** @var $block \Netzexpert\OrderApproval\Block\Checkout\Cart\ApprovalRequest */
+?>
+
+<form id="send-order-approval" class="form_button" method="post">
+    <ul class="checkout methods items checkout-methods-items">
+        <li class="item">
+            <button id="send-request" type="submit" title="<?= /* @escapeNotVerified */ __('Request for Approval') ?>" class="test action primary checkout">
+                <span><?= /* @escapeNotVerified */ __('Request for Approval') ?></span>
+            </button>
+        </li>
+    </ul>
+</form>
+<script>
+    require(['jquery'],function() {
+        jQuery(document).ready(function () {
+            jQuery("#send-order-approval").submit(function () {
+                var data = jQuery(this).serialize();
+                jQuery.ajax({
+                    url: '<?= $block->getFormUrl() ?>',
+                    type: "POST",
+                    data: data,
+                    showLoader: true,
+                    context: jQuery('body'),
+                    cache: false,
+                    success: function(response){
+                        console.log(response.output);
+                    }
+                });
+                return false;
+            });
+        });
+    });
+</script>
